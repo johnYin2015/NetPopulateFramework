@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_main"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context="com.example.dataresoverdemo.MainActivity"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="姓名:"
+        android:layout_margin="5dp"
+        android:id="@+id/name_edt"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="年龄:"
+        android:layout_margin="5dp"
+        android:id="@+id/age_edt"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:id="@+id/gender_rg">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性别："/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="男"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/male"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="女"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/female"/>
+    </RadioGroup>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入你想要操作的学员的编号"
+        android:layout_margin="5dp"
+        android:id="@+id/id_edt"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="添加"
+            android:id="@+id/insert_btn"
+            android:onClick="operate"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="查询"
+            android:id="@+id/query_btn"
+            android:onClick="operate"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="删除"
+            android:id="@+id/delete_btn"
+            android:onClick="operate"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="修改"
+            android:id="@+id/update_btn"
+            android:onClick="operate"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/mather_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="利用UriMatcher去解析Uri"
+        android:onClick="operate"/>
+    <Button
+        android:id="@+id/uri_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="利用URI自带的解析方法解析Uri"
+        android:onClick="operate"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/stu_list"></ListView>
+</LinearLayout>
